@@ -9,5 +9,6 @@ namespace Todos.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<ToDoModel> ToDoModel { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }

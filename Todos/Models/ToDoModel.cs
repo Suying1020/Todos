@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Todos.Models
 {
@@ -15,5 +17,11 @@ namespace Todos.Models
 
         [Required(ErrorMessage = "ItemStatus is required")]
         public bool ItemStatus { get; set; }
+
+        [Required]
+        public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual IdentityUser IdentityUser { get; set; }
     }
 }
