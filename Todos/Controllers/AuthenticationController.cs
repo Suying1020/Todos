@@ -42,7 +42,7 @@ namespace Todos.Controllers
                 {
                     new Claim("name", user.UserName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            };
+                };
 
                 foreach (var userRole in userRoles)
                 {

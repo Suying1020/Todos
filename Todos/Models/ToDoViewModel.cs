@@ -2,7 +2,7 @@
 
 namespace Todos.Models
 {
-    public class ToDoItemViewModel
+    public class ToDoViewModel
     {
         public int ItemId { get; set; }
 
